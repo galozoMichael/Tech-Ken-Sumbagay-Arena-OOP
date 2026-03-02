@@ -58,6 +58,8 @@ public class MainLoop {
         matchManager.startMatch(player1, player2);
     }
 
+
+    // IDEA: ADD COLORS SA CHARACTERS , AND MAYBE INFO?
     private BaseCharacter selectCharacter() {
         System.out.println("Choose your fighter:");
         System.out.println("1. Heihachi Mishima");
