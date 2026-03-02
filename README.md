@@ -25,5 +25,6 @@
 | :--- | :--- | :--- |
 | **Michael S. Galozo** | Core Foundation | Main Loop, Menu GUI, MatchManager (Referee), Base Architecture. |
 | **John Frankline R. Go** | AI & Utilities | AI Logic, Input Handling, Combat Math calculations. |
-| **Perez, Jose Ely P.** | Character Impl. | Heihachi, Devil Jin, Johnny Cage. |
-| **Jarrell Nett D.
+| **Jose Ely P. Perez** | Character Impl. | Heihachi, Devil Jin, Johnny Cage. |
+| **Jarrell Nett D. Homecillo** | Character Impl. | Reptile, Scorpion, Liu Kang. |
+| **Karl Vincent V. Illusorio** | SkillActions Impl. | AttackAction, GuardAction, HealthStealDamageAction. |
