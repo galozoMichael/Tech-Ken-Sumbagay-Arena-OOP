@@ -8,14 +8,9 @@ import com.techken.skills.actions.HealthStealDamageAction;
 public class DevilJin extends BaseCharacter {
 
     private boolean isBerserk = false;
-    private final int maxHealth;
 
     public DevilJin() {
-        
         super("Devil Jin", 120, 20, 15);
-        this.maxHealth = 120;
-
-    
         //this.skills[0] = new AttackAction("Laser Scraper", 25);
         //this.skills[1] = new AttackAction("Demon Paw", 30);
        // this.skills[2] = new HealthStealDamageAction("Infernal Destruction", 20);
@@ -26,7 +21,7 @@ public class DevilJin extends BaseCharacter {
         super.takeDamage(damage);
 
         //kani kay polymorphism (get angry deviljin mode)
-        if (!isBerserk && this.getHealth() <= (maxHealth * 0.3)) {
+        if (!isBerserk && this.getHealth() <= (getMaxHealth() * 0.3)) {
             isBerserk = true;
             System.out.println(">>> DEVIL JIN ENTERS BERSERK MODE! DAMAGE BUFFED! <<<");
 
