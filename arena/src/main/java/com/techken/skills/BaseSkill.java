@@ -1,13 +1,12 @@
 package com.techken.skills;
-
 public abstract class BaseSkill {
-    private String name;
+    private String skillName;
 
-    public BaseSkill(String name) {
-        this.name = name;
+    public BaseSkill(String skillName) {
+        this.skillName = skillName;
     }
 
-    public String getName() {
-        return name;
+    public String getSkillName() {
+        return skillName;
     }
 }
