@@ -4,9 +4,9 @@ import com.techken.model.BaseCharacter;
 import com.techken.model.fighters.DevilJin;
 import com.techken.model.fighters.HeihachiMisihima;
 import com.techken.model.fighters.JohnnyCage;
-// import com.techken.model.fighters.Reptile;
-// import com.techken.model.fighters.Scorpion;
-// import com.techken.model.fighters.LiuKang;
+import com.techken.model.fighters.Reptile;
+import com.techken.model.fighters.Scorpion;
+import com.techken.model.fighters.LiuKang;
 import com.techken.utils.AnsiColors;
 
 import java.util.Scanner;
@@ -130,9 +130,9 @@ private BaseCharacter selectCharacter() {
         case "1": return new HeihachiMisihima();
         case "2": return new DevilJin();
         case "3": return new JohnnyCage();
-        case "4": return null; // return new Reptile();
-        case "5": return null; // return new Scorpion();
-        case "6": return null; // return new LiuKang();
+        case "4": return new Reptile();
+        case "5": return new Scorpion();
+        case "6": return new LiuKang();
         default:
             System.out.println();
             System.out.println(AnsiColors.RED_BRIGHT + "             !! Invalid selection. Please choose 1-6. !!" + AnsiColors.RESET);
@@ -144,7 +144,7 @@ private BaseCharacter selectCharacter() {
     private BaseCharacter selectCpuCharacter() {
         Random random = new Random();
         // Only pick from the 3 implemented characters for now
-        int pick = random.nextInt(3) + 1;
+        int pick = random.nextInt(6) + 1;
         System.out.print("CPU selected: ");
 
         switch (pick) {
@@ -154,9 +154,18 @@ private BaseCharacter selectCharacter() {
             case 2:
                 System.out.println("Devil Jin");
                 return new DevilJin();
-            default: // case 3
+            case 3:
                 System.out.println("Johnny Cage");
                 return new JohnnyCage();
+            case 4:
+                System.out.println("Reptile");
+                return new Reptile();
+            case 5:
+                System.out.println("Scorpion");
+                return new Scorpion();
+            default: // case 6
+                System.out.println("Liu Kang");
+                return new LiuKang();
         }
     }
 }
