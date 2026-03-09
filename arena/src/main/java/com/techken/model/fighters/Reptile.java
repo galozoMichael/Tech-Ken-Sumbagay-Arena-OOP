@@ -1,20 +1,27 @@
 package com.techken.model.fighters;
 
-public class Reptile extends Fighter {
-    public Reptile() {
-        super("Reptile", 95, 40, 11);
+import com.techken.model.BaseCharacter;
+import com.techken.skills.actions.AttackAction;
+import com.techken.skills.actions.HealthStealDamageAction;
 
-        //this.skills[0] = new AttackAction("Acid Spit", 20);
-        //this.skills[1] = new AttackAction("Poison Cloud", 15);
-        //this.skills[2] = new AttackAction("Life Drain", 25);
+public class Reptile extends BaseCharacter {
+
+    public Reptile() {
+        super("Reptile", 90, 40, 10);
+        // Skills: Uses HealthSteal to simulate poison/acid
+        this.skills[0] = new AttackAction("Force Ball", 20);
+        this.skills[1] = new HealthStealDamageAction("Acid Spit", 20);
+        this.skills[2] = new HealthStealDamageAction("Toxic Cloud", 15);
     }
 
     @Override
-    public void specialMove(Fighter opponent) {
-        System.out.println("Reptile uses Life Drain!");
-        opponent.takeDamage(25);
-        this.health += 12; // heal half of damage
-        System.out.println("Reptile heals for 12 HP!");
+    public void takeDamage(int damage) {
+        // High evasion: 30% chance to dodge the attack completely
+        if (Math.random() < 0.30) {
+            System.out.println(">>> Reptile DODGED the attack! (Evasion) <<<");
+        } else {
+            super.takeDamage(damage);
+        }
     }
 }
 

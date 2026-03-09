@@ -1,19 +1,17 @@
 package com.techken.model.fighters;
 
-public class Scorpion extends Fighter {
+import com.techken.model.BaseCharacter;
+import com.techken.skills.actions.AttackAction;
+import com.techken.skills.actions.GuardAction;
+
+public class Scorpion extends BaseCharacter {
+
     public Scorpion() {
-        super("Scorpion", 100, 55, 7);
+        super("Scorpion", 110, 30, 10);
 
-        //offensive burst
-        //this.skills[0] = new AttackAction("Spear - Get Over Here!", 30);
-        //this.skills[1] = new AttackAction("Hellfire", 28);
-        //this.skills[2] = new AttackAction("Teleport Punch", 26);
-    }
-
-    @Override
-    public void specialMove(Fighter opponent) {
-        System.out.println("Scorpion unleashes Hellfire!");
-        opponent.takeDamage(30);
+        // Skills: High damage AttackActions and a GuardAction
+        this.skills[0] = new AttackAction("Spear (Get Over Here!)", 35);
+        this.skills[1] = new AttackAction("Hellfire", 40);
+        this.skills[2] = new GuardAction("Netherrealm Guard", 15);
     }
 }
-
