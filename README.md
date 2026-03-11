@@ -4,6 +4,13 @@
 
 **Tech-Ken: Sumbagay Arena** is a turn-based fighting game simulation built using OOP principles. The project features a roster of 6 unique fighters, an automated AI opponent, and a combat system that calculates damage, defense, and evasion in real-time.
 
+## 👥 RB19 - Real Bisaya 19
+endmymisery2424 - Michael S. Galozo<br>
+johnfnkgo - John Frankline R. Go<br>
+JEdi3k - Jose Ely P. Perez<br>
+SungJinBron24 - Karl Vincent V. Illusorio<br>
+jarexx101 - Jarrell Nett D. Homecillo
+
 ## 📖 Table of Contents
 * [Character Roster](#character-roster)
 * [The Team](#the-team)
